@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador</title>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Combo&family=Rampart+One&display=swap" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Encriptador/Desencriptador</h1>
+        <div id="contenido">
+            <div id="ingreso">
+                <p>Ingrese sólo letras minúsculas, sin acento.</p>
+                <textarea id="texto_ingreso" cols="70" rows="15" placeholder="Ingrese texto a encriptar" style="text-transform:lowercase;" autofocus></textarea>
+                <button id="encriptar">Encriptar</button>
+                <button id="desencriptar" >Desencriptar</button>
+            </div>
+            <div id="resultado">
+                <textarea id="texto_copiar" class="resultado" cols="70" rows="15"></textarea>
+                <button id="copiar" >Copiar</button>
+                <button id="inicio" >Inicio</button>
+            </div>
+            <div id="muneco">
+                <img src="./imagen/Muñeco.svg">
+                <p class="texto_muneco">Estoy preparado, a la espera de tu texto.</p>
+            </div>
+        </div>
+        <footer class="piePagina">
+            <h2>Desarrollado por &#169;Tiare Viveros</h2>
+            <h2>2022</h2>
+        </footer>
+        <script src="./codificador.js"></script>
+    </body>
+
+</html>
