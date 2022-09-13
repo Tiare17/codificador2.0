@@ -18,16 +18,22 @@ function ocultar_resultado(){
     document.getElementById("resultado").style.display = "none";
 }
 
+function str(){
+    textoIngresado.toLowerCase();
+    
+}
+
 function codificador(){
     texto = textoIngresado.value;
-    
+    textoMinuscula = texto.toLowerCase();
+    textoLimpio = textoMinuscula.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
     for (posicion=0;posicion<=vocales.length;posicion++){
         
-        if (texto.includes(vocales[posicion])){
-            texto = texto.replaceAll(vocales[posicion],cambioVocales[posicion]);
+        if (textoLimpio.includes(vocales[posicion])){
+            textoLimpio = textoLimpio.replaceAll(vocales[posicion],cambioVocales[posicion]);
         }
     }
-    textoCodificado=texto;
+    textoCodificado=textoLimpio;
     
     document.getElementById("texto_copiar").value = textoCodificado;
     textoIngresado.value="";
